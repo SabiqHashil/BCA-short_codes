@@ -1,0 +1,60 @@
+<!--
+Write a JavaScript program to check whether the given sides can form a
+triangle. if Yes, find the type (isosceles, equilateral and scalene) and area of
+the triangle. Use prompt dialogue box to accept the sides.
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Triangle Checker and Area Calculator</title>
+  </head>
+  <body>
+    <script>
+      // Function to check if sides form a triangle and calculate its area
+      function checkTriangleAndArea() {
+        // Get sides from user input using prompt dialogues
+        let side1 = parseFloat(prompt("Enter length of side 1:"));
+        let side2 = parseFloat(prompt("Enter length of side 2:"));
+        let side3 = parseFloat(prompt("Enter length of side 3:"));
+
+        // Check if sides form a valid triangle
+        if (
+          side1 + side2 > side3 &&
+          side1 + side3 > side2 &&
+          side2 + side3 > side1
+        ) {
+          // Calculate the semi-perimeter
+          let s = (side1 + side2 + side3) / 2;
+
+          // Calculate the area using Heron's formula
+          let area = Math.sqrt(
+            s * (s - side1) * (s - side2) * (s - side3)
+          ).toFixed(2);
+
+          // Determine the type of triangle
+          let triangleType;
+          if (side1 === side2 && side2 === side3) {
+            triangleType = "Equilateral";
+          } else if (side1 === side2 || side1 === side3 || side2 === side3) {
+            triangleType = "Isosceles";
+          } else {
+            triangleType = "Scalene";
+          }
+
+          // Display the results in an alert dialog
+          let resultMessage = `The sides (${side1}, ${side2}, ${side3}) form a ${triangleType} triangle.\n`;
+          resultMessage += `Area of the triangle: ${area}`;
+          alert(resultMessage);
+        } else {
+          // If sides do not form a triangle, display an error message
+          alert("The given sides do not form a valid triangle.");
+        }
+      }
+
+      // Call the function when the page loads
+      window.onload = checkTriangleAndArea;
+    </script>
+  </body>
+</html>
