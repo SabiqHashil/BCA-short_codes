@@ -1,12 +1,10 @@
 // Write a program to find the sum, difference, product, quotient and remainder of two numbers passed as command line argument.
 
-import java.util.Scanner;
 
-public class Arithmetic {
+public class Arithmetic1 {
     public static void main(String args[]) {
         int first, second, add, subtract, multiply, remainder;
         float devide;
-        Scanner scanner = new Scanner(System.in);
 
         first = Integer.parseInt(args[0]);
         second = Integer.parseInt(args[1]);
