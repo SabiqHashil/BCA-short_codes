@@ -2,7 +2,7 @@
 
 class ObjectCount7 {
     // Static variable to keep track of the number of objects created
-    static int count = 0;
+    static int count;
 
     ObjectCount7() {
         // Constructor: Increment the count when an object is created
