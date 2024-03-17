@@ -2,60 +2,65 @@
 // Create another class mark inherit from Student to read marks of 5 subjects and find total and average. 
 // Write a Java program to display the result of a student.
 
-import java.util.Scanner;
+import java.util.*;
 
+// Define a class named Student
 class Student {
-    protected String name;
-    protected int rollNumber;
+    // Instance variables
+    String name, place;
+    int age;
 
+    // Method to read details of a student
     public void readDetails() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter name: ");
-        name = scanner.nextLine();
-        System.out.print("Enter roll number: ");
-        rollNumber = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter name:");
+        name = sc.nextLine();
+        System.out.println("Enter place:");
+        place = sc.nextLine();
+        System.out.println("Enter age:");
+        age = sc.nextInt();
+        sc.close(); 
     }
 
+    // Method to display details of a student
     public void displayDetails() {
-        System.out.println("Name: " + name);
-        System.out.println("Roll Number: " + rollNumber);
+        // Print student details
+        System.out.println("Name: " + name + "\nPlace: " + place + "\nAge: " + age);
     }
 }
 
+// Define a class named Mark which extends Student
 class Mark extends Student {
-    private int[] marks = new int[5];
-    private int total;
-    private double average;
+    // Additional instance variables
+    int[] sub = new int[5]; // Array to store subject marks
+    float avg, total; // Variables for average and total marks
 
+    // Method to read marks of 5 subjects
     public void readMarks() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter marks for 5 subjects:");
         for (int i = 0; i < 5; i++) {
-            System.out.print("Enter marks for subject " + (i + 1) + ": ");
-            marks[i] = scanner.nextInt();
+            int temp = sc.nextInt(); // Read marks for each subject
+            sub[i] = temp; // Store marks in the array
+            total += temp; // Calculate total marks
         }
-    }
 
-    public void calculateTotalAndAverage() {
-        total = 0;
-        for (int mark : marks) {
-            total += mark;
-        }
-        average = (double) total / 5;
-    }
+        avg = total / 5; // Calculate average marks
 
-    public void displayResult() {
-        displayDetails();
-        System.out.println("Total marks: " + total);
-        System.out.println("Average marks: " + average);
+        // Print total and average marks
+        System.out.println("Total Marks: " + total);
+        System.out.println("Average Marks: " + avg);
+        sc.close();
     }
 }
 
-public class StudentDetails6 {
-    public static void main(String[] args) {
-        Mark student = new Mark();
-        student.readDetails();
-        student.readMarks();
-        student.calculateTotalAndAverage();
-        student.displayResult();
+// Main class
+class Main {
+    public static void main(String args[]) {
+        Mark m = new Mark(); // Create an object of Mark class
+
+        m.readDetails(); // Call readDetails method to read student details
+        m.displayDetails(); // Call displayDetails method to display student details
+        m.readMarks(); // Call readMarks method to read subject marks
     }
 }
