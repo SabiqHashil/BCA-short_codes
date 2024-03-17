@@ -3,17 +3,17 @@
 
 public class Arithmetic1 {
     public static void main(String args[]) {
-        int first, second, add, subtract, multiply, remainder;
+        int a, b, add, subtract, multiply, remainder;
         float devide;
 
-        first = Integer.parseInt(args[0]);
-        second = Integer.parseInt(args[1]);
+        a = Integer.parseInt(args[0]);
+        b = Integer.parseInt(args[1]);
 
-        add = first + second;
-        subtract = first - second;
-        multiply = first * second;
-        devide = (float) first / second;
-        remainder = first % second;
+        add = a + b;
+        subtract = a - b;
+        multiply = a * b;
+        devide = (float) a / b;
+        remainder = a % b;
 
         System.out.println("Sum = " + add);
         System.out.println("Difference = " + subtract);
