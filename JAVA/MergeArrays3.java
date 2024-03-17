@@ -1,3 +1,5 @@
+// Write a program to merge two arrays.
+
 import java.util.*;
 
 public class MergeArrays3 {
