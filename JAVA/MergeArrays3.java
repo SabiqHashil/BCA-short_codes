@@ -2,29 +2,29 @@ import java.util.*;
 
 public class MergeArrays3 {
     public static void main(String args[]) {
-        Scanner s = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter array 1 limit: ");
-        int n = s.nextInt();
+        int n = sc.nextInt();
 
         int c[] = new int[50];
 
         int a[] = new int[n];
         System.out.println("Enter array 1 elements: ");
         for (int i = 0; i < n; i++) {
-            a[i] = s.nextInt();
+            a[i] = sc.nextInt();
             c[i] = a[i];
         }
 
         int k = n;
 
         System.out.println("Enter array 2 limit: ");
-        int m = s.nextInt();
+        int m = sc.nextInt();
 
         int b[] = new int[m];
         System.out.println("Enter array 2 elements: ");
         for (int i = 0; i < m; i++) {
-            b[i] = s.nextInt();
+            b[i] = sc.nextInt();
             c[k] = b[i];
             k++;
         }
@@ -33,6 +33,6 @@ public class MergeArrays3 {
         for (int i = 0; i < n + m; i++) {
             System.out.println(c[i]);
         }
-        s.close();
+        sc.close();
     }
 }
