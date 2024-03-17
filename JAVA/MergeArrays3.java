@@ -1,37 +1,38 @@
-// Write a program to merge two arrays.
+import java.util.*;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
-class MergeArrays {
-    public static void main(String[] args) {
+public class MergeArrays3 {
+    public static void main(String args[]) {
         Scanner s = new Scanner(System.in);
 
-        System.out.print("Enter the number of elements in the first array: ");
+        System.out.println("Enter array 1 limit: ");
         int n = s.nextInt();
-        int[] a = new int[n];
 
-        System.out.println("Enter the elements of the first array:");
+        int c[] = new int[50];
+
+        int a[] = new int[n];
+        System.out.println("Enter array 1 elements: ");
         for (int i = 0; i < n; i++) {
             a[i] = s.nextInt();
+            c[i] = a[i];
         }
 
-        System.out.print("Enter the number of elements in the second array: ");
-        int m = s.nextInt();
-        int[] b = new int[m];
+        int k = n;
 
-        System.out.println("Enter the elements of the second array:");
+        System.out.println("Enter array 2 limit: ");
+        int m = s.nextInt();
+
+        int b[] = new int[m];
+        System.out.println("Enter array 2 elements: ");
         for (int i = 0; i < m; i++) {
             b[i] = s.nextInt();
+            c[k] = b[i];
+            k++;
         }
 
-        int[] me = new int[n + m];
-        System.arraycopy(a, 0, me, 0, n);
-        System.arraycopy(b, 0, me, n, m);
-
-        System.out.println("Merged Array: " + Arrays.toString(me));
-
+        System.out.println("Merged array: ");
+        for (int i = 0; i < n + m; i++) {
+            System.out.println(c[i]);
+        }
         s.close();
     }
 }
-
