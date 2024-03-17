@@ -1,21 +1,20 @@
 // Write a program to count and display total number of objects created to a class. (Hint: static members).
 
-class ObjectCount7 {
-    // Static variable to keep track of the number of objects created
-    static int count;
+class Object {
+    static int thayoli;
 
-    ObjectCount7() {
-        // Constructor: Increment the count when an object is created
-        count++;
+    Object() {
+        thayoli++;
     }
+}
 
-    public static void main(String[] args) {
-        ObjectCount7 obj1 = new ObjectCount7();
-        ObjectCount7 obj2 = new ObjectCount7();
-        ObjectCount7 obj3 = new ObjectCount7();
-        ObjectCount7 obj4 = new ObjectCount7();
+public class ObjectCount7 {
+    public static void main(String args[]) {
+        Object shit = new Object();
+        Object shit1 = new Object();
+        Object shit2 = new Object();
+        Object shit3 = new Object();
 
-        // Display the total number of objects created
-        System.out.println("Total number of objects created: " + ObjectCount7.count);
+        System.out.println(Object.thayoli);
     }
 }
