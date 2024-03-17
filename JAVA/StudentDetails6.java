@@ -50,7 +50,7 @@ class Mark extends Student {
     }
 }
 
-public class Main {
+public class StudentDetails6 {
     public static void main(String[] args) {
         Mark student = new Mark();
         student.readDetails();
