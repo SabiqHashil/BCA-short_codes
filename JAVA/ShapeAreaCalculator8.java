@@ -3,19 +3,19 @@
 // derived from ThreeDim. Write a program to determinethe area of various shapes.
 
 abstract class Shape {
-    abstract double calculateArea();
+    abstract double area();
 }
 
 class TwoDim extends Shape {
     @Override
-    double calculateArea() {
+    double area() {
         return 0; // Placeholder value
     }
 }
 
 class ThreeDim extends Shape {
     @Override
-    double calculateArea() {
+    double area() {
         return 0; // Placeholder value
     }
 }
@@ -28,7 +28,7 @@ class Square extends TwoDim {
     }
 
     @Override
-    double calculateArea() {
+    double area() {
         return side * side;
     }
 }
@@ -43,7 +43,7 @@ class Triangle extends TwoDim {
     }
 
     @Override
-    double calculateArea() {
+    double area() {
         return 0.5 * base * height;
     }
 }
@@ -56,7 +56,7 @@ class Sphere extends ThreeDim {
     }
 
     @Override
-    double calculateArea() {
+    double area() {
         return 4 * Math.PI * radius * radius;
     }
 }
@@ -69,21 +69,21 @@ class Cube extends ThreeDim {
     }
 
     @Override
-    double calculateArea() {
+    double area() {
         return 6 * side * side;
     }
 }
 
-public class ShapeAreaCalculator {
+public class ShapeAreaCalculator8 {
     public static void main(String[] args) {
         Square square = new Square(5.0);
         Triangle triangle = new Triangle(4.0, 3.0);
         Sphere sphere = new Sphere(2.0);
         Cube cube = new Cube(3.0);
 
-        System.out.println("Area of Square: " + square.calculateArea());
-        System.out.println("Area of Triangle: " + triangle.calculateArea());
-        System.out.println("Surface Area of Sphere: " + sphere.calculateArea());
-        System.out.println("Surface Area of Cube: " + cube.calculateArea());
+        System.out.println("Area of Square: " + square.area());
+        System.out.println("Area of Triangle: " + triangle.area());
+        System.out.println("Surface Area of Sphere: " + sphere.area());
+        System.out.println("Surface Area of Cube: " + cube.area());
     }
 }
