@@ -2,44 +2,38 @@
     Write a Java Programming Code to Check given string is Anagram or Not.
     If the two strings are anagram to each other, then one string can be rearranged 
     to form the other string. For Example: abc and cba are anagram string.
-*/ 
+*/
+
+import java.util.*;
 
 
+public class AnagramChecker5 {
+    public static void main(String args[]) {
+        // Create a Scanner object for input
+        Scanner sc = new Scanner(System.in);
 
-import java.util.Arrays;
-import java.util.Scanner;
+        // Read two strings from the user
+        System.out.println("Enter the first string:");
+        String S1 = sc.nextLine();
+        System.out.println("Enter the second string:");
+        String S2 = sc.nextLine();
 
-class AnagramChecker5 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Input two strings
-        System.out.print("Enter the first string: ");
-        String str1 = scanner.nextLine().toLowerCase(); // Convert to lowercase for case-insensitive comparison
-        System.out.print("Enter the second string: ");
-        String str2 = scanner.nextLine().toLowerCase(); // Convert to lowercase for case-insensitive comparison
-
-        // Remove spaces and convert the strings to character arrays
-        char[] charArray1 = str1.replaceAll("\\s", "").toCharArray();
-        char[] charArray2 = str2.replaceAll("\\s", "").toCharArray();
-
-        // Check if the lengths of the character arrays are equal
-        if (charArray1.length != charArray2.length) {
-            System.out.println("The two strings are not anagrams.");
-            return;
-        }
+        // Convert the strings to character arrays and remove spaces
+        char string1[] = S1.replaceAll("\\s", "").toCharArray();
+        char string2[] = S2.replaceAll("\\s", "").toCharArray();
 
         // Sort the character arrays
-        Arrays.sort(charArray1);
-        Arrays.sort(charArray2);
+        Arrays.sort(string1);
+        Arrays.sort(string2);
 
-        // Compare the sorted character arrays
-        if (Arrays.equals(charArray1, charArray2)) {
-            System.out.println("The two strings are anagrams.");
+        // Check if the sorted arrays are equal (anagrams)
+        if (Arrays.equals(string1, string2)) {
+            System.out.println("The strings are Anagrams");
         } else {
-            System.out.println("The two strings are not anagrams.");
+            System.out.println("The strings are Not Anagrams");
         }
 
-        scanner.close();
+        // Close the Scanner object
+        sc.close();
     }
 }
