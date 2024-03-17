@@ -13,6 +13,7 @@ class ObjectCount7 {
         ObjectCount7 obj1 = new ObjectCount7();
         ObjectCount7 obj2 = new ObjectCount7();
         ObjectCount7 obj3 = new ObjectCount7();
+        ObjectCount7 obj4 = new ObjectCount7();
 
         // Display the total number of objects created
         System.out.println("Total number of objects created: " + ObjectCount7.count);
