@@ -1,10 +1,10 @@
 // Write a program to count and display total number of objects created to a class. (Hint: static members).
 
 class Object {
-    static int thayoli;
+    static int count;
 
     Object() {
-        thayoli++;
+        count++;
     }
 }
 
@@ -15,6 +15,6 @@ public class ObjectCount7 {
         Object shit2 = new Object();
         Object shit3 = new Object();
 
-        System.out.println(Object.thayoli);
+        System.out.println(Object.count);
     }
 }
