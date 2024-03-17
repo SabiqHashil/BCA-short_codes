@@ -42,5 +42,6 @@ public class TraceTranspose4 {
 
             System.out.println("Trace: " + sum);
         }
+        sc.close();
     }
 }
