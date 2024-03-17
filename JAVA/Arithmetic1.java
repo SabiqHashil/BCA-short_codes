@@ -1,25 +1,24 @@
 // Write a program to find the sum, difference, product, quotient and remainder of two numbers passed as command line argument.
 
-
 public class Arithmetic1 {
-    public static void main(String args[]) {
-        int a, b, add, subtract, multiply, remainder;
-        float devide;
+    public static void main(String[] args) {
 
-        a = Integer.parseInt(args[0]);
-        b = Integer.parseInt(args[1]);
+        // Convert command line arguments to integers
+        int num1 = Integer.parseInt(args[0]);
+        int num2 = Integer.parseInt(args[1]);
 
-        add = a + b;
-        subtract = a - b;
-        multiply = a * b;
-        devide = (float) a / b;
-        remainder = a % b;
+        // Perform calculations
+        int sum = num1 + num2;
+        int diff = num1 - num2;
+        int product = num1 * num2;
+        int quotient = num1 / num2;
+        int remainder = num1 % num2;
 
-        System.out.println("Sum = " + add);
-        System.out.println("Difference = " + subtract);
-        System.out.println("Product = " + multiply);
-        System.out.println("Quotient = " + devide);
-        System.out.println("Remainder = " + remainder);
-        
+        // Display results
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + diff);
+        System.out.println("Product: " + product);
+        System.out.println("Quotient: " + quotient);
+        System.out.println("Remainder: " + remainder);
     }
 }
