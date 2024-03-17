@@ -74,7 +74,7 @@ class Cube extends ThreeDim {
     }
 }
 
-public class ShapeAreaCalculator8 {
+public class ShapeArea8 {
     public static void main(String[] args) {
         Square square = new Square(5.0);
         Triangle triangle = new Triangle(4.0, 3.0);
