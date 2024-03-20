@@ -1,6 +1,6 @@
 // Hello World Program (Write a program to Toast Hello World)
 
-package com.andoubleos.myprogram;
+package com.example;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -18,14 +18,14 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         btn = (Button) findViewById(R.id.button1);
+
         btn.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                Toast.makeText(MainActivity.this, "Hello World",
-                        Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "mahir flash", 500).show();
             }
         });
     }
+
 }
