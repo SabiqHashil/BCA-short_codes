@@ -1,76 +1,78 @@
 // Write a Program to display Stop watch
 
-package com.example.eightstopwatch;
+package com.example;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.app.Activity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
+    Button start, stop, reset;
+    TextView tv;
 
-    private Button startButton;
-    private Button pauseButton;
-    private Button resetButton;
+    Handler ch = new Handler();
 
-    private TextView timerValue;
-
-    private long startTime = 0L;
-
-    private Handler customHandler = new Handler();
-
-    long timeInMilliseconds = 0L;
-    long timeSwapBuff = 0L;
+    long startTime = 0L;
+    long timeInMillis = 0L;
     long updatedTime = 0L;
+    long timeSwapBuff = 0L;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        timerValue = (TextView) findViewById(R.id.timerValue);
-        startButton = (Button) findViewById(R.id.startButton);
-        startButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                startTime = SystemClock.uptimeMillis();
-                customHandler.postDelayed(updateTimerThread, 0);
-            }
-        });
-        resetButton = (Button) findViewById(R.id.resetButton);
-        resetButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                timerValue.setText("00:00:00");
-                // adapter.notifyDataSetChanged();
-            }
-        });
-        pauseButton = (Button) findViewById(R.id.pauseButton);
-        pauseButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
+        start = (Button) findViewById(R.id.button1);
+        stop = (Button) findViewById(R.id.button3);
+        reset = (Button) findViewById(R.id.button2);
 
-                timeSwapBuff += timeInMilliseconds;
-                customHandler.removeCallbacks(updateTimerThread);
+        tv = (TextView) findViewById(R.id.textView1);
+
+        start.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                startTime = SystemClock.uptimeMillis();
+                ch.postDelayed(updateTimerThread, 0);
+            }
+        });
+
+        reset.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                tv.setText("00:00:00");
+            }
+        });
+
+        stop.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                timeSwapBuff += timeInMillis;
+                ch.removeCallbacks(updateTimerThread);
             }
         });
     }
 
     private Runnable updateTimerThread = new Runnable() {
+
+        @Override
         public void run() {
-
-            timeInMilliseconds = SystemClock.uptimeMillis() - startTime;
-
-            updatedTime = timeSwapBuff + timeInMilliseconds;
-            int secs = (int) (updatedTime / 1000);
-            int mins = secs / 60;
-            secs = secs % 60;
-            int milliseconds = (int) (updatedTime % 1000);
-            timerValue.setText("" + mins + ":"
-                    + String.format("%02d", secs) + ":"
-                    + String.format("%03d", milliseconds));
-            customHandler.postDelayed(this, 0);
+            timeInMillis = SystemClock.uptimeMillis() - startTime;
+            updatedTime = timeSwapBuff + timeInMillis;
+            int seconds = (int) (updatedTime / 1000);
+            int minutes = seconds / 60;
+            seconds = seconds % 60;
+            int milliSeconds = (int) (updatedTime % 1000);
+            tv.setText("" + minutes + ":" + String.format("%02d", seconds) + ":" + String.format("%03d", milliSeconds));
+            ch.postDelayed(this, 0);
         }
     };
+
 }
