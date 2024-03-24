@@ -1,17 +1,18 @@
 <!-- 
-Write a JavaScript program to store different colors in an array and change the background color of the page using this array elements.
+    Write a JavaScript program to store different colors in an array and change the background color of the page using this array elements. 
 -->
 
-<!DOCTYPE html>
+
+<html>
 
 <head>
-    <title>BackgroundColor Changer</title>
+    <title>Background Color Changer</title>
 </head>
 
 <body>
     <button id="button" onclick="Click()">Change Color</button>
     <script>
-        let array = ["red", "green", "blue", "pink", "indigo"]
+        let array = ["red", "blue", "green", "blue", "pink", "indigo"]
 
         function Click() {
             document.body.style.backgroundColor = array[Math.floor(Math.random() * array.length)]
