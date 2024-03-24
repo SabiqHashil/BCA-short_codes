@@ -82,7 +82,7 @@ class Sphere extends ThreeDim {
 }
 
 // Main class ShapeArea8
-public class ShapeArea8 {
+public class ShapeArea {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

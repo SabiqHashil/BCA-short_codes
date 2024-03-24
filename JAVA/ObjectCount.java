@@ -8,7 +8,7 @@ class Object {
     }
 }
 
-public class ObjectCount7 {
+public class ObjectCount {
     public static void main(String args[]) {
         // Creating four objects of the Object class
         Object shit = new Object();

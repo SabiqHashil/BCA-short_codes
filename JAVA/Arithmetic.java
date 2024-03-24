@@ -1,6 +1,6 @@
 // Write a program to find the sum, difference, product, quotient and remainder of two numbers passed as command line argument.
 
-public class Arithmetic1 {
+public class Arithmetic {
     public static void main(String[] args) {
 
         // Convert command line arguments to integers

@@ -3,7 +3,7 @@
 import java.util.*;
 
 
-public class TraceTranspose4 {
+public class TraceTranspose {
     public static void main(String args[]) {
         // Create a Scanner object for input
         Scanner sc = new Scanner(System.in);

@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class MergeArrays3 {
+public class MergeArrays {
     public static void main(String args[]) {
         // Create a Scanner object for input
         Scanner sc = new Scanner(System.in);

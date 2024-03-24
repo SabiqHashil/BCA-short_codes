@@ -25,7 +25,7 @@ class EO implements Runnable {
     }
 }
 
-public class MultiThread9 {
+public class MultiThread {
     public static void main(String[] args) {
         // Create two threads, one for printing even numbers and one for odd numbers
         Thread e = new Thread(new EO(20, true)); // Thread for even numbers up to 20

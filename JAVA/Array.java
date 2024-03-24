@@ -7,7 +7,7 @@
 
 import java.util.*;
 
-public class Array2 {
+public class Array {
     public static void main(String args[]) {
         // Initialize an integer array
         int array[] = { 5, 2, 9, 5, 3 };
