@@ -2,19 +2,17 @@
     Write a JavaScript program to validate email based on the following condition
         * Mail id must contain the @ and . character
         * There must be at least one character before and after the @.
-        * There must be at least two characters after .(dot).
+        * There must be at least two characters after .(dot). 
 -->
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <title>Email Validation</title>
 </head>
 
 <body>
-    <label>Email </label>
-    <input type="text" id="email">
+    Email: <input type="text" id="email"> <br>
     <button onclick="Click()">Submit</button>
     <script>
         function Click() {
@@ -22,9 +20,11 @@
             var validate = /^[a-zA-Z0-9-._]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$/;
 
             if (validate.test(email))
-                alert("Email is valid")
+                alert("Email is valid");
             else
                 alert("Not valid")
         }
     </script>
 </body>
+
+</html>
