@@ -6,11 +6,9 @@
 <head>
     <title>Reverse a String</title>
 </head>
-
-<body style="text-align: center;">
-    <h2>Enter a string to reverse:</h2>
+<body>
     <form action="" method="POST">
-        <input type="text" name="str1">
+        <input type="text" name="str">
         <input type="submit">
     </form>
 </body>
@@ -27,7 +25,6 @@ if ($_POST) {
         }
     }
 
-    $string = $_POST['str1'];
+    $string = $_POST['str'];
     rev_str($string);
 }
-?>

@@ -7,7 +7,7 @@
     <title>Bio Data</title>
 </head>
 
-<body style="text-align: center;">
+<body>
     <form action="" method="POST">
         <h1>Bio Data</h1>
         <label for="name1">Name:</label> <br>
