@@ -25,7 +25,7 @@ do
         echo "Sub = "$sub;;
         3)mul=`expr $n1 \* $n2`
         echo "Mul = "$mul;;
-        4)div=`echo $n1 / $n2 | bc -l`
+        4)div=`expr $n1 / $n2`
         echo "Div = "$div;;
         *)echo "Invalid choice";;
     esac
