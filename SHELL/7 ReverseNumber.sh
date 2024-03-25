@@ -2,16 +2,16 @@
 
 
 
-echo "Enter a Number:"
-read a
-rev=0
-sd=0
-or=$a
-while [ $a -gt 0 ]
+echo "Enter a number: "
+read num
+
+reverse=0
+
+while [ $num -gt 0 ]
 do
-    sd=`expr $a % 10`
-    temp=`expr $rev \* 10`
-    rev=`expr $temp + $sd`
-    a=`expr $a / 10`
+    remainder=$(( $num % 10 ))
+    reverse=$(( $reverse * 10 + $remainder ))
+    num=$(( $num / 10 ))
 done
-echo "Reverse of $or is $rev"
+
+echo "Reverse of the number is: $reverse"
