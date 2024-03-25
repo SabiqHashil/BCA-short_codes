@@ -1,22 +1,19 @@
 # 9. Write a shell script to find n Fibonacci numbers
 
+echo "Enter the limit for Fibonacci number: "
+read limit
+count=3
+n1=0
+n2=1
 
+echo $n1
+echo $n2
 
-
-
-echo "How many numbers do you want of Fibonacci series ?"
-read total
-x=0
-y=1
-i=2
-echo "Fibonacci Series up to $total terms :: "
-echo "$x"
-echo "$y"
-while [ $i -lt $total ]
+while [ $count -le $limit ]
 do
-    i=`expr $i + 1 `
-    z=`expr $x + $y `
-    echo "$z"
-    x=$y
-    y=$z
+	n3=$(( $n1 + $n2 ))
+	n1=$n2
+	n2=$n3
+	echo $n3
+	count=$(( $count + 1 ))
 done

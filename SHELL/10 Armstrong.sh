@@ -1,23 +1,23 @@
 # 10. Write a shell script to check whether a given number is Armstrong or not
 
+echo "Enter a number to check whether it is an armstrong number: "
+read n
 
-
-echo "Enter a number: "
-read c
-x=$c
 sum=0
-r=0
-n=0
-while [ $x -gt 0 ]
+remainder=0
+temp=$n
+
+while [ $temp -gt 0 ]
 do
-    r=`expr $x % 10`
-    n=`expr $r \* $r \* $r`
-    sum=`expr $sum + $n`
-    x=`expr $x / 10`
+	remainder=$(( $temp % 10 ))
+	sum=$(( $sum + remainder * remainder * remainder ))
+	temp=$(( $temp / 10 ))
 done
-if [ $sum -eq $c ]
+
+if [ $sum -eq $n ]
 then
-    echo "It is an Armstrong Number."
+	echo "$n is an armstrong number."
 else
-    echo "It is not an Armstrong Number."
+	echo "$n is not an armstrong number."
 fi
+
