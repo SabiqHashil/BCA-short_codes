@@ -1,13 +1,7 @@
 # 16. Write a shell script to display current date and time, number of users, terminal name, login date and time
 
-
-
-
-
-
-
 clear
-echo "current date and time : $(date)"
-echo "terminal name : $(tty)"
-echo "users : $(users)"
-echo "login date time : $(w) "
+echo "Current date and Time: $(date)"
+echo "Terminal name: $(tty)"
+echo "Users: $(users)"
+echo "Login date time: $(w)"
