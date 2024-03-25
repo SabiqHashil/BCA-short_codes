@@ -5,11 +5,6 @@ package com.example.tencurrentsystemtime;
 import android.widget.TimePicker;
 import java.util.Calendar;
 import android.os.Bundle;
-import android.app.Activity;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
 
 public class MainActivity extends Activity implements
         View.OnClickListener {
@@ -36,7 +31,6 @@ public class MainActivity extends Activity implements
     public void onClick(View v) {
         if (v == btnDatePicker) {
 
-            // Get Current Date
             final Calendar c = Calendar.getInstance();
             mYear = c.get(Calendar.YEAR);
             mMonth = c.get(Calendar.MONTH);
@@ -57,12 +51,10 @@ public class MainActivity extends Activity implements
         }
         if (v == btnTimePicker) {
 
-            // Get Current Time
             final Calendar c = Calendar.getInstance();
             mHour = c.get(Calendar.HOUR_OF_DAY);
             mMinute = c.get(Calendar.MINUTE);
 
-            // Launch Time Picker Dialog
             TimePickerDialog timePickerDialog = new TimePickerDialog(this,
                     new TimePickerDialog.OnTimeSetListener() {
                         @Override

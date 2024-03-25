@@ -4,9 +4,6 @@ package com.andoubleos.mylistview;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 public class MainActivity extends Activity {
     ListView lv;
@@ -24,8 +21,6 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        // getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 }

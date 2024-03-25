@@ -4,12 +4,6 @@ package com.example.radio;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
     Button btn;
@@ -24,7 +18,6 @@ public class MainActivity extends Activity {
         btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                // TODO Auto-generated method stub
                 int selectId = rdg.getCheckedRadioButtonId();
                 RadioButton rdb = (RadioButton) findViewById(selectId);
                 Toast.makeText(MainActivity.this,

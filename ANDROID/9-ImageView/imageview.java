@@ -4,10 +4,6 @@ package com.andoubleos.imgview;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.ImageView;
 
 public class MainActivity extends Activity implements OnClickListener {
     ImageView img;
@@ -29,7 +25,6 @@ public class MainActivity extends Activity implements OnClickListener {
 
     @Override
     public void onClick(View arg0) {
-        // TODO Auto-generated method stub
         switch (arg0.getId()) {
             case R.id.button1:
                 img.setBackgroundResource(R.drawable.image1);

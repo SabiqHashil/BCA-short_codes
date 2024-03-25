@@ -4,11 +4,6 @@ package com.example.eightstopwatch;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -44,7 +39,6 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 timerValue.setText("00:00:00");
-                // adapter.notifyDataSetChanged();
             }
         });
         pauseButton = (Button) findViewById(R.id.pauseButton);

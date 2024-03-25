@@ -4,11 +4,6 @@ package com.andoubleos.mycheckbox;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
     CheckBox chk1, chk2, chk3, chk4;
@@ -28,7 +23,6 @@ public class MainActivity extends Activity implements OnClickListener {
 
     @Override
     public void onClick(View arg0) {
-        // TODO Auto-generated method stub StringBuffer strb = new StringBuffer();
         strb.append("Android: ").append(chk1.isChecked());
         strb.append("\nJava: ").append(chk2.isChecked());
         strb.append("\nPHP: ").append(chk3.isChecked());

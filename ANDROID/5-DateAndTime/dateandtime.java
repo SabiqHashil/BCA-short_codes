@@ -6,11 +6,7 @@ import java.util.Calendar;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
+
 
 public class MainActivity extends Activity {
     Button btn;
@@ -27,7 +23,6 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View arg0) {
-                // TODO Auto-generated method stub
 
                 Calendar c = Calendar.getInstance();
                 year = c.get(Calendar.YEAR);
@@ -42,7 +37,6 @@ public class MainActivity extends Activity {
 
                     @Override
                     public void onClick(DialogInterface arg0, int arg1) {
-                        // TODO Auto-generated method stub
 
                     }
                 });

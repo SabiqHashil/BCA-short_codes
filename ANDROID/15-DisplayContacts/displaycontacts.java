@@ -4,9 +4,6 @@ package com.example.gridview;
 
 import android.widget.GridView;
 import android.os.Bundle;
-import android.app.Activity;
-import android.view.View;
-import android.widget.GridView;
 
 public class MainActivity extends Activity {
     GridView gv;

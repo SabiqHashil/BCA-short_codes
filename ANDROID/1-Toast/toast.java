@@ -5,9 +5,6 @@ package com.andoubleos.myprogram;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
     Button btn;
@@ -22,7 +19,6 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View arg0) {
-                // TODO Auto-generated method stub
                 Toast.makeText(MainActivity.this, "Hello World",
                         Toast.LENGTH_LONG).show();
             }
