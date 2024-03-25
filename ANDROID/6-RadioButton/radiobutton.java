@@ -13,25 +13,23 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
     Button btn;
-    RadioButton rb;
-    RadioGroup rg;
+    RadioGroup rdg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
         btn = (Button) findViewById(R.id.button1);
-        rg = (RadioGroup) findViewById(R.id.radioGroup1);
-        
+        rdg = (RadioGroup) findViewById(R.id.radioGroup1);
         btn.setOnClickListener(new OnClickListener() {
-            
             @Override
             public void onClick(View arg0) {
-                int id = rg.getCheckedRadioButtonId();
-                rb = (RadioButton) findViewById(id); 
-                Toast.makeText(MainActivity.this, rb.getText(), 500).show();
+                // TODO Auto-generated method stub
+                int selectId = rdg.getCheckedRadioButtonId();
+                RadioButton rdb = (RadioButton) findViewById(selectId);
+                Toast.makeText(MainActivity.this,
+                        rdb.getText(), 500).show();
             }
         });
-    }    
+    }
 }
